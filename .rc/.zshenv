@@ -7,3 +7,4 @@
 PAGER='less'
 EDITOR='code --wait'
 SUDO_EDITOR='nano'
+. "$HOME/.cargo/env"

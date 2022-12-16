@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 # set zsh scripts directory
-export ZDOTDIR=.rc
+export ZDOTDIR="$HOME/.rc"
 
 # source actual .zshenv
-source .rc/.zshenv
+source $HOME/.rc/.zshenv

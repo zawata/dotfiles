@@ -4,5 +4,5 @@
 # Sourced On Login Shells
 #
 
-# source all interactive scripts
+# source all core scripts
 for f in ~/.rc/**/core.sh; do source $f; done
