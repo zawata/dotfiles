@@ -12,7 +12,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 # plugins
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/git-auto-fetch", from:oh-my-zsh
+# zplug "plugins/git-auto-fetch", from:oh-my-zsh // this will break the cli for private, https git remotes
 zplug "plugins/jsontools", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/web-search", from:oh-my-zsh
