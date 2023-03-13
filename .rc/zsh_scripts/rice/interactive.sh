@@ -9,7 +9,7 @@ zbell_ignore=($EDITOR $SUDO_EDITOR $PAGER)
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# plugins
+# o-m-z plugins
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 # zplug "plugins/git-auto-fetch", from:oh-my-zsh // this will break the cli for private, https git remotes

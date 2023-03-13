@@ -1,9 +1,15 @@
+#! /usr/bin/env bash
+
+#
+# Environment Initialization
+#
+
 # packages I need
-sudo pamac kitty fortune
+sudo pamac fortune
 sudo pamac build visual-studio-code-bin
 
 #packages I don't need
-sudo pamac remove kate konsole xterm
+sudo pamac remove kate xterm
 
 # install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

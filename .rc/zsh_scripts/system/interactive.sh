@@ -1,24 +1,26 @@
 #!/usr/bin/env bash
 
 #===============================================================================
+# History
+#===============================================================================
+HISTFILE=~/.rc/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+#HISTDUP=erase
+setopt incappendhistory
+
+#===============================================================================
 # Power
 #===============================================================================
 
 alias suspend="sudo systemctl suspend"
 alias hibernate="sudo systemctl hibernate"
 alias shutdown="sudo systemctl shutdown"
-# alias reboot="sudo systemctl reboot"
 alias reboot-bios="sudo systemctl reboot --firmware-setup"
 
-#===============================================================================
-# Other Stuff
-#===============================================================================
-
-alias kssh="kitty +kitten ssh"
-
-#===============================================================================
-# Fix my goddamn keyboard
-#===============================================================================
+# #===============================================================================
+# # Fix my goddamn keyboard
+# #===============================================================================
 autoload zkbd;
 source ~/.rc/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 [[ -n ${key[Home]} ]]   && bindkey  "${key[Home]}" beginning-of-line

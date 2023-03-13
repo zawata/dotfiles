@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 #
-# Sourced On Interactive Session
+# Sourced On Interactive Sessions
 #
 
 # check if we're in tmux and if not, run it
@@ -21,4 +21,3 @@ alias dfgit='$(which git) --git-dir=$HOME/.df-repo/ --work-tree=$HOME'
 
 # display Quote on zsh start
 fortune
-
