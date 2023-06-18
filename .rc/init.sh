@@ -5,7 +5,7 @@
 #
 
 # packages I need
-sudo pamac fortune
+sudo pamac install fortune
 sudo pamac build visual-studio-code-bin
 
 #packages I don't need
@@ -20,8 +20,7 @@ rustup update
 
 # install vcpkg
 cd /opt/
-sudo git clone https://github.com/Microsoft/vcpkg.git
-chown -R johna vcpkg
+git clone https://github.com/Microsoft/vcpkg.git
 cd vcpkg
 ./bootstrap.sh -disableMetrics
 

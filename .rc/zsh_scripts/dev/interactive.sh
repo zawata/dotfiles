@@ -43,6 +43,12 @@ function ng() {
         "electron17")
             more_args+=("--target=17.4.11" "--dist-url=https://electronjs.org/headers")
             ;;
+        "electron21")
+            more_args+=("--target=21.4.0" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron24")
+            more_args+=("--target=24.4.1" "--dist-url=https://electronjs.org/headers")
+            ;;
         "debug")
             more_args+=("--debug")
             ;;
@@ -56,4 +62,13 @@ function ng() {
     done
 
     npx node-gyp $action --arch=x64 -j max ${more_args[@]}
+}
+
+function dump-runtime-info {
+    echo Library Requirements
+    ldd $1
+
+    echo
+    echo GLIBC Version requirements
+    objdump -T $1 | grep GLIBC | sed 's/.*GLIBC_\([.0-9]*\).*/\1/g' | sort -Vu
 }
