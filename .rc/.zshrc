@@ -5,7 +5,6 @@
 #
 
 # check if we're in tmux and if not, run it
-# disabling because I'm not a fan of tmux right now :)
 # if [[ -z "$TMUX" ]]; then
 #     tmux new
 #     exit

@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
 #===============================================================================
-# Aliases
-#===============================================================================
-alias runskaffold="skaffold dev --port-forward -p"
-
-
-#===============================================================================
 # Functions
 #===============================================================================
 
@@ -48,6 +42,9 @@ function ng() {
             ;;
         "electron24")
             more_args+=("--target=24.4.1" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron28")
+            more_args+=("--target=28.2.0" "--dist-url=https://electronjs.org/headers")
             ;;
         "debug")
             more_args+=("--debug")

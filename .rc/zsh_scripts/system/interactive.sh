@@ -18,51 +18,14 @@ alias hibernate="sudo systemctl hibernate"
 alias shutdown="sudo systemctl shutdown"
 alias reboot-bios="sudo systemctl reboot --firmware-setup"
 
-# #===============================================================================
-# # Fix my goddamn keyboard
-# #===============================================================================
+#===============================================================================
+# Fix my goddamn keyboard
+#===============================================================================
 autoload zkbd;
 source ~/.rc/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 [[ -n ${key[Home]} ]]   && bindkey  "${key[Home]}" beginning-of-line
 [[ -n ${key[End]} ]]    && bindkey  "${key[End]}"  end-of-line
 [[ -n ${key[Delete]} ]] && bindkey  "${key[Delete]}"  delete-char
-
-#===============================================================================
-# Themes
-#===============================================================================
-
-#TODO: change to Adw when gnome gets its shit together...or just switch over to KDE
-LIGHT_THEME="Flat-Remix-GTK-Green"
-DARK_THEME="Flat-Remix-GTK-Green-Dark"
-
-function setmode() {
-    if [[ -z $1 ]]; then
-        echo "setmode [light|dark]"
-        return
-    fi
-
-    if [[ "$1" = "light" ]]; then
-        gsettings set org.gnome.desktop.interface gtk-theme "$LIGHT_THEME";
-        # gsettings set org.gnome.desktop.interface color-scheme default
-    elif [[ "$1" = "dark" ]] ; then
-        gsettings set org.gnome.desktop.interface gtk-theme "$DARK_THEME";
-        # gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-    else
-        echo Unrecognized mode
-        echo "setmode [light|dark]"
-    fi
-}
-
-function togglemode() {
-    eval current_theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
-    if [[ "$current_theme" == "$LIGHT_THEME" ]]; then
-        setmode dark
-    elif [[ "$current_theme" == "$DARK_THEME" ]]; then
-        setmode light
-    else
-        echo "Unrecognized theme: $current_theme $DARK_THEME"
-    fi
-}
 
 #===============================================================================
 # Bash Command Utilities

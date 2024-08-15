@@ -15,13 +15,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm_exec" ] && \. "$NVM_DIR/nvm_exec"
 
 # go
-export GOROOT="$HOME/.go"
+# export GOROOT="$HOME/.go"
 export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"s
+export PATH="$PATH:$GOPATH/bin"
 
 # Rust Binaries
 export PATH="$PATH:$HOME/.cargo/bin"
-
-# temp, delete me
-export PATH="$PATH:$HOME/.other-git/bin"
-

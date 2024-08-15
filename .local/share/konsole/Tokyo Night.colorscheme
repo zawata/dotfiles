@@ -1,11 +1,17 @@
 [Background]
 Color=26,27,38
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundFaint]
 Color=42,46,50
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundIntense]
 Color=0,0,0
+RandomHueRange=360
+RandomSaturationRange=100
 
 [Color0]
 Color=50,52,74
@@ -81,12 +87,18 @@ Color=172,176,208
 
 [Foreground]
 Color=169,177,214
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundFaint]
 Color=239,240,241
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundIntense]
 Color=255,255,255
+RandomHueRange=360
+RandomSaturationRange=100
 
 [General]
 Anchor=0.5,0.5
@@ -94,7 +106,7 @@ Blur=true
 ColorRandomization=false
 Description=Tokyo Night
 FillStyle=Tile
-Opacity=0.2
+Opacity=0.6
 Wallpaper=
 WallpaperFlipType=NoFlip
 WallpaperOpacity=1

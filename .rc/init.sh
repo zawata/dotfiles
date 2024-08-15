@@ -8,9 +8,6 @@
 sudo pamac install fortune
 sudo pamac build visual-studio-code-bin
 
-#packages I don't need
-sudo pamac remove kate xterm
-
 # install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
@@ -20,7 +17,9 @@ rustup update
 
 # install vcpkg
 cd /opt/
+mkdir vcpkg
+sudo chown $USER vcpkg
 git clone https://github.com/Microsoft/vcpkg.git
 cd vcpkg
-./bootstrap.sh -disableMetrics
+./bootstrap-vcpkg.sh -disableMetrics
 
