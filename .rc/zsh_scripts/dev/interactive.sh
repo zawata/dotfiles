@@ -25,6 +25,9 @@ function ng() {
     for var in "$@"
     do
         case $var in
+        "generate")
+            action="configure"
+            ;;
         "build")
             action="build"
             ;;
@@ -45,6 +48,21 @@ function ng() {
             ;;
         "electron28")
             more_args+=("--target=28.2.0" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron31")
+            more_args+=("--target=31.1.0" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron32")
+            more_args+=("--target=32.0.0" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron33")
+            more_args+=("--target=33.0.0" "--dist-url=https://electronjs.org/headers")
+            ;;
+        "electron34")
+            more_args+=("--target=34.0.0" "--dist-url=https://electronjs.org/headers")
+        ;;
+        "electron35")
+            more_args+=("--target=35.0.0" "--dist-url=https://electronjs.org/headers")
             ;;
         "debug")
             more_args+=("--debug")

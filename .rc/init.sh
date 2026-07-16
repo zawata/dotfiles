@@ -15,6 +15,11 @@ sudo pamac install docker docker-compose dog feh nmap gnu-netcat htop
 # AUR packages
 sudo pamac build 1password awsvpnclient etcher-cli-bin httpie-desktop-bin via-bin visual-studio-code-bin
 
+# install zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
+
+
 # install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 

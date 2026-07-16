@@ -19,3 +19,6 @@ alias dfgit='$(which git) --git-dir=$HOME/.df-repo/ --work-tree=$HOME'
 
 # display Quote on zsh start
 fortune
+
+# opencode
+export PATH=/home/johna/.opencode/bin:$PATH

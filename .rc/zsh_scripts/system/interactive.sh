@@ -34,6 +34,15 @@ source ~/.rc/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 function pm () {
     case $1 in
         autoremove) sudo pacman -R $(pacman -Qdtq) ;;
+        fix-git)
+            # iterate directories
+            for dir in /var/tmp/pamac-build-$USER/*; do
+                if [ -d "$dir/.git" ]; then
+                    echo "Resetting git repository in $dir"
+                    git -C "$dir" reset HEAD --hard
+                fi
+            done
+        ;;
         *) echo " unknown command: '$1'" ;;
     esac
 }
