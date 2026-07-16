@@ -1,0 +1,89 @@
+{
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "\t${1:ClassName}();",
+      "\t~${1:ClassName}();",
+      "",
+      "private:",
+      "\t$0",
+      "};"
+    ],
+    "description": "C++ class with constructor and destructor"
+  },
+  "class (rule of five)": {
+    "prefix": "class5",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "\t${1:ClassName}();",
+      "\t~${1:ClassName}();",
+      "",
+      "\t${1:ClassName}(const ${1:ClassName}&) = ${2:default};",
+      "\t${1:ClassName}& operator=(const ${1:ClassName}&) = ${2:default};",
+      "\t${1:ClassName}(${1:ClassName}&&) noexcept = ${3:default};",
+      "\t${1:ClassName}& operator=(${1:ClassName}&&) noexcept = ${3:default};",
+      "",
+      "private:",
+      "\t$0",
+      "};"
+    ],
+    "description": "C++ class following the rule of five"
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name} {",
+      "\t${1:Name}();",
+      "\t~${1:Name}();",
+      "",
+      "private:",
+      "\t$0",
+      "};"
+    ],
+    "description": "C++ struct with constructor and destructor"
+  },
+  "struct (rule of five)": {
+    "prefix": "struct5",
+    "body": [
+      "struct ${1:Name} {",
+      "\t${1:Name}();",
+      "\t~${1:Name}();",
+      "",
+      "\t${1:Name}(const ${1:Name}&) = ${2:default};",
+      "\t${1:Name}& operator=(const ${1:Name}&) = ${2:default};",
+      "\t${1:Name}(${1:Name}&&) noexcept = ${3:default};",
+      "\t${1:Name}& operator=(${1:Name}&&) noexcept = ${3:default};",
+      "",
+      "private:",
+      "\t$0",
+      "};"
+    ],
+    "description": "C++ struct following the rule of five"
+  },
+  "pod struct": {
+    "prefix": "pod-struct",
+    "body": [
+      "struct ${1:Name} {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Plain-old-data struct"
+  },
+  "namespace": {
+    "prefix": "namespace",
+    "body": [
+      "namespace ${1:name} {",
+      "$0",
+      "}  // namespace ${1:name}"
+    ],
+    "description": "C++ namespace block"
+  },
+  "#pragma once": {
+    "prefix": "once",
+    "body": ["#pragma once", "", "$0"],
+    "description": "Header guard"
+  }
+}
