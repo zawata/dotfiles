@@ -2,7 +2,7 @@
 .df-repo
 
 # ignore everything
-*
+/*
 
 # font metadata churn
 *.uuid
